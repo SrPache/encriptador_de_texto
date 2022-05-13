@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto (Alura Challenges)</title>
+    <script src="https://kit.fontawesome.com/55c8f6dfe2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+
+</head>
+<body>
+    
+    <a href="#"><header id="logo"><img src="public/media/img/logotipo.png" alt=""></header></a>
+
+
+    <main id="programa">
+
+        <div id="div-texto"><textarea name="original" id="original" cols="30" rows="10" autofocus placeholder="Ingrese el texto aquí"></textarea></div>
+        <div id="div-info"><p id="info"><i class="fas fa-exclamation-circle"></i> Solo letras minúsculas y sin acentos</p></div>
+        <div id="div-botones">
+            <a href="#not-found" id="encriptador" class="botones">Encriptar</a>
+            <a href="#not-found" id="desencriptador" class="botones">Desencriptar</a>
+        </div>
+
+    </main>
+
+
+    <section id="resultado">
+
+        <div id="not-found">
+
+            <div><img src="public/media/img/not-found.png" alt=""></div>
+            <div><h3>Ningún mensaje fue encontrado</h3></div>
+            <div><p>Ingresa el texto que desees encriptar o desencriptar.</p></div>
+
+        </div>
+
+        <div id="cripto">
+            <div></div>
+        </div>
+
+    </section>
+
+
+    <footer id="footer">
+        <p>Hecho con amor por <a href="https://www.twitter.com/Sr_Pache" target="_blank">Franco <i class="fa-brands fa-twitter"></i></a></p>
+    </footer>
+
+
+    <script src="public/js/code.js"></script>
+
+</body>
+</html>
