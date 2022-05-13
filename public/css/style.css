@@ -1,105 +1,117 @@
-:root{
+:root {
     --alura: #0a3871;
     --fondo: #f3f5fc;
-    --info: #6B7178;
+    --info: #6b7178;
     --extra: #343a40;
     --rojo: #f00;
-    --fuente: 'Roboto', sans-serif;
-    --transparencia: rgba(255, 255, 255, .9);
+    --fuente: "Roboto", sans-serif;
+    --transparencia: rgba(255, 255, 255, 0.9);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-align: center;
 }
 
-#logo{grid-area: logo;}
-#programa{grid-area: programa;}
-#resultado{grid-area: resultado;}
-#footer{grid-area: footer;}
+#logo {
+    grid-area: logo;
+}
 
-html{scroll-behavior: smooth;}
+#programa {
+    grid-area: programa;
+}
 
-body{
+#resultado {
+    grid-area: resultado;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     box-sizing: border-box;
     font-family: var(--fuente);
     padding: 2.5vh 2.5vw;
     width: 100%;
+    min-height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content minmax(60vh, auto) minmax(90vh, auto) min-content;
-    grid-template-areas: 
-        'logo'
-        'programa'
-        'resultado'
-        'footer'
-    ;
+    grid-template-areas:
+        "logo"
+        "programa"
+        "resultado"
+        "footer";
     gap: 1rem;
     background-color: var(--fondo);
 }
 
-textarea{
+textarea {
     outline: none;
     resize: none;
     border: none;
     width: 100%;
     height: 100%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     padding: 1rem;
 }
 
-
-#logo img{
+#logo img {
     width: 40px;
-    padding:5px;
+    padding: 5px;
 }
 
-#programa{
+#programa {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr min-content auto;
 }
 
-#original{
-    text-align: left;
-}
-
-#original, #original::placeholder{
-    font-family: var(--fuente);
+#original {
     color: var(--alura);
-    background-color: transparent;
-    font-size: 2rem;
-
 }
 
-#original::placeholder{
+#original,
+#original::placeholder {
+    font-family: var(--fuente);
+    background-color: transparent;
+    font-size: 1.8rem;
+}
+
+#original::placeholder {
     text-align: center;
 }
 
-#div-info{
+#div-info {
+    text-align: left;
     margin: 1.5rem auto;
     color: var(--info);
-    font-size: .75rem;
+    font-size: 0.75rem;
 }
 
-#info i{
-    margin: 0 .5rem;
+#info i {
+    margin: 0 0.5rem;
     color: var(--alura);
 }
 
-#div-botones{
-    padding:1rem;
+#div-botones {
+    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
-.botones{
+.botones {
     padding: 1rem;
     border: 1px solid var(--alura);
     text-decoration: none;
@@ -107,13 +119,35 @@ textarea{
     color: var(--alura);
 }
 
-#encriptador{
+#encriptador {
     background-color: var(--alura);
     color: var(--transparencia);
 }
 
-#resultado, #cripto{
-    background-color : white;
+#encriptador:hover,
+#desencriptador:hover,
+#encriptador:focus,
+#desencriptador:focus {
+    font-weight: 500;
+    outline: none;
+}
+
+#encriptador:hover,
+#encriptador:focus {
+    background-color: #093368;
+    color: white;
+}
+
+#desencriptador:hover,
+#desencriptador:focus {
+    background-color: #fafafa;
+    /* border-color: #d2dbfb; */
+    /* border:none; */
+}
+
+#resultado,
+#cripto {
+    background-color: white;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
@@ -122,85 +156,113 @@ textarea{
     padding: 1rem 0;
 }
 
-#not-found{
-    display:flex;
+#not-found {
+    display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap: 1rem;
     padding: 1rem;
-    color: var(--extra)
+    color: var(--extra);
 }
 
-#not-found img{
+#not-found img {
     width: 85%;
 }
 
-#not-found h3{
+#not-found h3,
+h3 {
     font-size: 1.5rem;
     line-height: 1.4rem;
 }
 
-#not-found p{
-    font-size: .9rem;
+#not-found p {
+    font-size: 0.9rem;
     font-weight: 400;
 }
 
+#cripto {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    color: var(--info);
+    padding: 1rem;
+}
 
-#footer{
-    padding:1rem;
-    font-size: .85rem;
+#cripto h3 {
+    color: var(--alura);
+    font-weight: 400;
+}
+
+#copiador.botones {
+    border-color: #ddd;
+    color: #aaa;
+}
+
+#copiador.botones:hover,
+#copiador.botones:focus,
+#copiador.botones i:focus,
+#copiador.botones i:hover {
+    border-color: var(--alura);
+    color: var(--alura);
+}
+
+#copiador.botones:focus {
+    outline: none;
+}
+
+#footer {
+    padding: 1rem;
+    font-size: 0.85rem;
     color: var(--extra);
 }
 
-#footer a{
+#footer a {
     font-weight: bolder;
     text-decoration: none;
     color: var(--alura);
 }
 
-#footer a i{
+#footer a i {
     vertical-align: middle;
 }
 
-
-
 @media screen and (min-width: 500px) {
-    
-    body{
+    body {
         grid-template-columns: min-content 1fr;
-        grid-template-rows: minmax(60vh, auto) minmax(30vh,auto) min-content;
+        grid-template-rows: minmax(60vh, auto) minmax(30vh, auto) min-content;
         grid-template-areas:
-        'logo programa'
-        'logo resultado'
-        'footer footer';
+            "logo programa"
+            "logo resultado"
+            "footer footer";
     }
-
 }
 
 @media screen and (min-width: 590px) {
-    #div-botones{
+    #div-botones {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
     }
 }
 
 @media screen and (min-width: 920px) {
-
-    body{
+    body {
         grid-template-columns: min-content 2fr 1fr;
         grid-template-rows: min-content min-content;
         grid-template-areas:
-        'logo programa resultado'
-        'logo footer footer';
+            "logo programa resultado"
+            "logo footer footer";
     }
 
-
-    #div-botones{
-        padding:0 3rem;
-        gap:1rem;
+    #div-botones {
+        padding: 0 3rem;
+        gap: 1rem;
     }
-
 }
 
+/* #not-found {display: none;} */
 
+/* #cripto {display: flex;} */
 
-#cripto{display:none};
+#cripto {display:none}

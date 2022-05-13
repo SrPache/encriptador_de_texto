@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/55c8f6dfe2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/css/style.css">
 
 </head>
@@ -22,8 +22,8 @@
         <div id="div-texto"><textarea name="original" id="original" cols="30" rows="10" autofocus placeholder="Ingrese el texto aquí"></textarea></div>
         <div id="div-info"><p id="info"><i class="fas fa-exclamation-circle"></i> Solo letras minúsculas y sin acentos</p></div>
         <div id="div-botones">
-            <a href="#not-found" id="encriptador" class="botones">Encriptar</a>
-            <a href="#not-found" id="desencriptador" class="botones">Desencriptar</a>
+            <a href="#cripto" id="encriptador" class="botones">Encriptar</a>
+            <a href="#cripto" id="desencriptador" class="botones">Desencriptar</a>
         </div>
 
     </main>
@@ -40,7 +40,9 @@
         </div>
 
         <div id="cripto">
-            <div></div>
+            <h3 id="cripto-h3">Mensaje </h3>
+            <p id="cripto-p" ></p>
+            <div><a href="#" id="copiador" class="botones">Copiar al portapapeles <i class="fa-solid fa-clone"></i></a></div>
         </div>
 
     </section>
